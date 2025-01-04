@@ -1,5 +1,6 @@
 import { createContext, useState, useEffect } from 'react';
 
+
 export const NavContext = createContext();
 
 const NavContextProvider = (props) => {
@@ -7,7 +8,7 @@ const NavContextProvider = (props) => {
   const [search, setSearch] = useState('');
   const [mode, setMode] = useState(false);
   const [articles, setArticles] = useState([]);
-
+  
   const apiKey = '26e2a4deb5c74d9c99c51d7aaa9c2b5e';
 
   useEffect(() => {

@@ -1,5 +1,9 @@
 import React, { useContext } from 'react';
 import { NavContext } from '../context/NavContext';
+import { NavLink } from 'react-router-dom';
+import { FaFacebook } from 'react-icons/fa';
+import { FaInstagram } from 'react-icons/fa';
+import { FiTwitter } from 'react-icons/fi';
 
 const Footer = () => {
   const { mode } = useContext(NavContext);
@@ -16,14 +20,20 @@ const Footer = () => {
         </p>
         <div className="flex justify-center space-x-4 mt-4">
           <a href="#" className="hover:text-gray-400" aria-label="Facebook">
-            Facebook
+            <FaFacebook />
           </a>
           <a href="#" className="hover:text-gray-400" aria-label="Twitter">
-            Twitter
+            <FiTwitter />
           </a>
           <a href="#" className="hover:text-gray-400" aria-label="Instagram">
-            Instagram
+            <FaInstagram />
           </a>
+          <div className="flex md:block">
+            <ul className={`flex gap-2  ${mode ? 'text-white' : ''}`}>
+              <NavLink to="/About">About</NavLink>
+              <NavLink to="/Contact">Contact</NavLink>
+            </ul>
+          </div>
         </div>
       </div>
     </footer>

@@ -13,7 +13,7 @@ const HeroSection = () => {
                 mode ? 'text-white' : ''
               }`}
             >
-              CHECK OUT YOUR FOOD RECIPE
+              STAY UPDATED
               <hr className="bg-black w-full h-8" />
             </h1>
           </div>
